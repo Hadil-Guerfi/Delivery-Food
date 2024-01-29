@@ -1,0 +1,287 @@
+.create-item{
+background-color: var(--main-background);
+min-height: calc(100vh - 95px);
+padding-top: 40px;
+}
+
+.create-item .container{
+    position: relative;
+}
+
+.createItem-container{
+    width: 65%;
+    height:100%;
+    background-color: var();
+    margin: 0 auto;
+    border: 1px solid rgb(209 213 219);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.create-item .input-title{
+    border-bottom: 1px solid rgb(209 213 219);
+    width: auto;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.create-item .title{
+     /* height: 20px; */
+     background-color:transparent;
+     font-weight: 600;
+     border: none;
+     outline: none;
+     color: var(--text-gray-500);
+     font-size: 18px;
+     padding-left: 5px;
+}
+
+
+
+.create-item .input-title :first-child{
+    font-size: 20px;
+    color: rgb(55 65 81);
+}
+
+
+
+.create-item .categories{
+    display: block;
+    border: 1px solid rgb(209 213 219);
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 16px ;
+    color: var(--heading-color);
+    
+
+}
+
+.create-item label {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 20px;
+    border: 1px solid rgb(209 213 219);
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+.create-item label div div{
+    font-size: 16px; 
+    color:var(--text-gray-500);
+
+}
+
+.create-item label div :first-child{
+     color:var(--text-gray-500);
+     font-size: 30px; 
+}
+
+.create-item label :first-child:hover,.create-item label div div:hover{
+    color:rgb(55 65 81);;
+
+}
+
+.create-item .upload{
+    width: 0;
+    height: 0;
+}
+
+.create-item .description div{
+    margin-top: 15px;
+    display: inline-block;
+    width: calc(50% - 15px);
+    background-color: transparent;
+    border-bottom: 1px solid rgb(209 213 219);
+}
+
+.create-item .description div :first-child{
+    color: rgb(55 65 81);
+    font-size: 24px;
+    margin-right: 5px;
+    transform: translateY(5px);
+}
+
+
+.create-item .description .calories{
+    margin-right: 15px;
+}
+
+
+.create-item .description div input{
+    color: var(--text-gray-500);
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+ }
+ 
+
+
+ .create-item .save-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.create-item .save-container button{
+    padding: 11px 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(16 185 129);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+.create-item .imported-img-cont,.loader{
+    background-color: transparent;
+    margin-top: 20px;
+    border: 1px solid rgb(209 213 219);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .create-item .imported-img-cont img{
+    width: 250px;
+    height: 250px;
+  }
+
+
+  .create-item .delete-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f56565;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: white;
+  }
+
+  
+  .create-item  .delete-btn:hover{
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .create-item .delete-img-container{
+    width: fit-content;
+    height: fit-content;
+  }
+
+
+  .process-status{
+    border: 1px solid rgb(209 213 219);
+    width: auto;
+    padding: 10px;
+    margin-bottom: 15px; 
+    border-radius: 10px;
+    font-size:18px ;
+    text-align: center;
+    font-weight: 600;  
+    color: var(--heading-color);
+  }
+
+  .success{
+    background-color: rgb(74 222 128);
+}
+
+  .failture{
+    background-color: rgb(248 113 113);
+
+  }
+
+
+
+
+  @media (max-width: 992px) {
+    .createItem-container{
+        width: 90%;
+    }
+
+    .create-item .description div{
+        width: auto;
+        margin-bottom: 10px;
+
+    }
+    .create-item .description div:first-child{
+       margin-top: 20px;
+    }
+    .create-item .imported-img-cont img {
+        width: 200px;
+        height: 215px;
+    }
+
+  }
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .create-item{
+        min-height: calc(100vh - 60px);
+        }
+        
+    .create-item .title {
+        width: 90%;
+    }
+
+    .create-item .description  {
+        text-align: start;
+    }
+
+    .create-item .imported-img-cont img{
+        width: 170px ;
+        height: 185px ;
+      }
+
+      .create-item .imported-img-cont,.loader {
+            height: 240px;
+        }
+
+      .create-item label {
+        height: 240px;
+        }
+
+        .create-item .delete-btn{
+        width: 40px;
+        height: 40px;
+        }
+
+        .process-status{
+            font-size: 16px;
+        }
+    
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

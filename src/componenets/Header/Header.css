@@ -1,0 +1,287 @@
+
+
+.header {
+    background-color: var(--main-background);
+}
+
+.header .large-screen-header{
+    height:95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .left-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.header .left-side img{
+    height: 65px;
+    width: 70px;
+}
+
+.header .left-side span{
+    font-size: 20px ;
+    font-weight: bold;
+    color: var(--heading-logo-title);
+}
+
+.header nav {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex-grow: 1;
+    column-gap: 35px;
+    z-index: 10;
+}
+
+.header ul{
+    display: flex;
+    align-items: center;
+    column-gap:50px;
+
+}
+
+
+.header ul li a{
+    position: relative;
+    color: var(--text--color) ;
+    cursor: pointer;
+}
+
+.header ul li a:hover::before{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffa055;
+    animation: appear-to-right 0.3s both;
+}
+
+@keyframes appear-to-right {
+
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;;
+    }
+    
+}
+
+.header .right-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 35px;
+}
+
+.header .icon{
+    position: relative;
+    height: fit-content;
+    cursor: pointer;
+
+}
+
+.header .icon :first-child{
+    font-size: 25px;
+}
+
+.header .icon div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    transform: translateY(-50%) translateX(30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .avatar{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+.header .small-screen-header{
+    display: flex;
+    padding-top: 10px;
+}
+
+@media (max-width: 992px) {
+    .header ul {
+        column-gap: 40px ;
+    }
+  }
+
+@media (max-width: 768px) {
+
+    .header .small-screen-header {
+        height:60px;
+        align-items: center;
+        justify-content:space-between;
+        position: relative;
+    }
+   
+    .header .left-side img{
+        height: 50px;
+        width: 50px;
+    }
+    
+    .header nav {
+        display: block ;
+        background-color: var(--small-ul-bakcground);
+        position: absolute;
+        right: 15px;
+        top:100%;
+        width: 150px;
+        padding: 10px 0px;
+        transition: 0.8s;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    }
+
+    .header nav ul{
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: flex-start !important;
+
+    }
+
+
+    .header ul li a:hover::before{
+        display: none;
+    }
+
+    .header nav ul li:not(:last-child){
+      padding-left: 15px;
+    }
+
+
+    .header nav ul li:last-child{
+        background-color: rgb(226 232 240);
+        width: 90%;
+        margin: 0 auto;
+        height:35px;
+        padding-top: 5px;
+        text-align: center;
+        border-radius:5px;
+    }
+
+
+    .header .icon :first-child{
+        font-size: 23px;
+    }
+
+    .header .icon div{
+        width: 18px;
+        height: 18px;
+    }
+
+    .header .avatar{
+        width: 38px;
+        height: 38px;
+    }
+}
+
+.displayed{
+    display: block !important;
+    animation: appearing 0.5s both;
+}
+
+@keyframes appearing {
+
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.hidden{
+    display: none !important;
+    animation: disappearing 0.3s both;
+
+}
+
+@keyframes disappearing {
+
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+.scaleClass{
+    animation: scaling 0.8s forwards;
+}
+
+@keyframes scaling {
+
+    0%{
+
+        transform: scale(0.5);
+
+    }
+
+    100%{
+        transform: scale(1);
+    }
+    
+}
+
+
+.avatar-container{
+    position: relative;
+}
+
+.avatar-container>div{
+    position: absolute;
+    right:0;
+    top:100%;
+    width: 180px;
+    height: fit-content;
+    background-color: rgb(249 250 251);
+    border-radius: 10px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.avatar-container>div a{
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text--color);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    animation: appearing 0.5s both;
+}
+
+.avatar-container>div a:hover{
+    background-color: rgb(226 232 240);
+}
+
+.avatar-container>div a :first-child{
+    margin-left: 20px;
+}

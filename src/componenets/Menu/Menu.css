@@ -1,0 +1,155 @@
+
+.menu-section{
+    position: relative;
+    background-color: var(--main-background);
+}
+
+
+.menu-heading{
+    margin-bottom: 20px !important;
+}
+
+.menu-section .dishes-cards{
+    display: flex;
+    column-gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.menu-section .dishes-card{
+    background-color: var(--card);
+    width:100px;
+    min-height: 94px;
+    cursor: pointer;
+    border-radius: 8px;
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    transition: 0.5s;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+.fastFood-icon-container{
+    background-color: var(--cardNumBg);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+.fastFood-icon-container :first-child{
+    color: var(--card);
+    font-size: 18px; 
+}
+
+
+.menu-section .catg{
+    font-size: 16px;
+    color: var(--text--color);
+    width:85px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu-section .dishes-card:hover{
+    background-color: var(--cardNumBg);
+    transform:scale(1.07);
+}
+
+.menu-section .dishes-card:hover .fastFood-icon-container{
+    background-color: var(--card);
+}
+
+
+.menu-section .dishes-card:hover .fastFood-icon-container :first-child{
+    color: var(--text--color);
+}
+
+
+.menu-section .dishes-card:hover .catg{
+    color: white ;
+
+}
+
+
+
+ .selected-card{
+    background-color: var(--cardNumBg) !important;
+}
+
+.selected-card .fastFood-icon-container{
+    background-color: var(--card);
+}
+
+
+ .selected-card .fastFood-icon-container :first-child{
+    color: var(--text--color);
+}
+
+
+.selected-card .catg{
+    color: white ;
+}
+
+.catg-container{
+    align-items: center;
+    justify-content: center;
+}
+
+
+.MenuContainer{
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+
+}
+
+.img-NotFound{
+    margin-top: -30px;
+    height: 300px;
+    width: 450px;
+}
+
+.NotFound div{
+    text-align: center;
+    font-size: 18px;
+    color: var( --heading-color);
+    padding-top: 10px;
+}
+
+
+@media (max-width: 992px) {
+    .catg-container{
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    
+  }
+  
+
+  @media (max-width: 768px) {
+    .img-NotFound{
+        margin-top: -65px;
+        height: 250px;
+        width: 300px;
+    }
+    .menu-section .heading-container .buttons {
+        top: 68px;
+        right: 0;
+    }
+  }
+
+  

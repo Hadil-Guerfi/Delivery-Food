@@ -1,0 +1,27 @@
+.HorizontalScroll-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+    white-space: nowrap;
+    scrollbar-width: none; 
+    background-color: var(--main-background);
+    overflow-x:auto;
+    padding: 40px 0;
+    direction: ltr;
+    scroll-behavior: smooth;
+}
+    
+.HorizontalScroll-container::-webkit-scrollbar{
+    width: 0;
+}
+
+@media (max-width: 768px) {
+
+    .HorizontalScroll-container {
+       padding-top: 60px;
+    }
+
+  }
+
+

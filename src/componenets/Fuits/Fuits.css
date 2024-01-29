@@ -1,0 +1,186 @@
+
+.fruits-section{
+    position: relative;
+    padding-top: 50px;
+    background-color: var(--main-background);
+}
+
+.section h2{
+    font-size:24px;
+    font-weight:600;
+    color: var(--heading-color);
+    position: relative;
+    width: fit-content;
+}
+
+.section h2::before{
+    content: '';
+    position: absolute;
+    bottom:-5px;
+    width: 37%;
+    height: 3px;
+    background-image: linear-gradient(to right, rgb(253, 186, 116), rgb(249, 115, 22));
+
+}
+
+.section .heading-container{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.section .heading-container .buttons{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+.section .heading-container .buttons :last-child {
+   margin-left: 10px;
+}
+
+
+.section .heading-container .buttons :first-child ,.section .heading-container .buttons :last-child {
+    color:white;
+    font-size: 18px;
+    background-color: rgb(253 186 116);
+    cursor: pointer;
+    border-radius: 8px;
+    height: 32px;
+    width: 32px;
+    transition: 0.3s;
+
+}
+
+.section .heading-container .buttons :first-child:hover,.section .heading-container .buttons :last-child:hover {
+
+    background-color: rgb(249 115 22);
+    transform: scale(0.9);
+}
+
+.section-card{
+    max-width: 280px;
+    background-color: var(--cardOverLay);
+    border-radius: 8px;
+    backdrop-filter: blur(16px);
+    padding: 0 5px 5px 10px;
+    transition: 0.3s;
+}
+
+.section-card:hover{
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+
+.section-card .img-side{
+    width:260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}   
+
+.section-card img{
+    position: relative;
+    width: 140px;
+    height: 120px;
+    transition: 0.3s;
+    top: -20px;
+    display: block;
+}
+.section-card img:hover{
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+    transform: scale(1.1);
+    
+}
+
+.section-card .img-side div{
+    width: 32px;
+    height: 32px;
+    background-color: rgb(220 38 38);
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
+    padding:5px;
+    position: relative;
+}
+
+.section-card .img-side div :first-child{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+}
+
+.section-card .img-side div:hover{
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transform: scale(0.9);
+}
+
+
+.section-card .params{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 22px;
+    width:28px ;
+    height: 28px;
+    color: var(--text--color);
+
+}
+
+
+
+
+.section-card .descrp-side{
+    text-align: end;
+    margin-top: -35px;
+}
+
+.section-card .descrp-side :first-child{
+    font-size: 16px;
+    color: var(--text--color);
+    font-weight: 600;
+    padding-bottom: 8px;
+
+}
+
+.section-card .descrp-side :nth-child(2){
+    font-size: 16px;
+    color: var(--text-gray-500);
+}
+
+.section-card .descrp-side :last-child {
+    font-size: 18px;
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+.section-card .descrp-side :last-child span{
+    font-size: 16px;
+    color: rgb(239 68 68);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .section-card img {
+        width: 110px;
+        height: 95px;
+    }
+    
+    .fruits-section .heading-container .buttons {
+        top: 90px;
+        right: 0;
+    }
+
+    .section-card .descrp-side {
+        margin-top: -25px;
+    }
+
+  }

@@ -1,0 +1,80 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --heading-color:#2e2e2e;
+  --text--color:#5b5a5b	;
+  --heading-logo-title:#4a484a;
+  --small-ul-bakcground:#f9fafb;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --main-background: rgb(246, 242, 244);
+  --home-title-dark:#2f2b2d;
+  --home-title-orange: #dd6b20 ;
+  --bike-background:#ffecd7;
+  --bike-title:#ee7629;
+  --bg-red-500: #f56565; 
+  --cardOverLay:rgba(256,256,256,0.4);
+  --card-desc-color:#9ca0ab;
+  --text-gray-500: rgb(107 114 128);
+  --card:rgba(256,256,256,0.8);
+  --cardNumBg:#e80013;
+  --card-bg:#282a2c;
+  --card-item:#2e3033;
+  --card-total:#353739;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button,a{
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+
